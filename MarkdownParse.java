@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.*;
 
 public class MarkdownParse {
 
@@ -17,6 +18,7 @@ public class MarkdownParse {
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
             toReturn.add(markdown.substring(openParen + 1, closeParen));
+            Integer[] a={openBracket,closeBracket,openParen,closeParen};List<Integer> indexlist=Arrays.asList(a);System.out.println(indexlist);//edited
             currentIndex = closeParen + 1;
         }
 
