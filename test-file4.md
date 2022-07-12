@@ -1,4 +1,4 @@
 # title
 
 []link goes here
-[(()](link;))
+[(()](link.com)
