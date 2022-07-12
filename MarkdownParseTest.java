@@ -11,6 +11,21 @@ public class MarkdownParseTest {
         assertEquals(2, 1 + 1);
     }
 
+    
+    @Test
+    public void testGetLinksTestFile4() throws IOException{
+        try {
+            
+            Path fileName = Path.of("test-file.md");
+            String content = Files.readString(fileName);
+            ArrayList<String> links = MarkdownParse.getLinks(content);
+            String[] expected = {};
+            assertArrayEquals(expected, links.toArray());
+        } catch (IOException e) {
+            System.out.println("File Not Found");
+        }
+    }	
+    
     @Test
     public void testGetLinks1(){
         try{
