@@ -7,20 +7,6 @@ import java.util.*;
 public class MarkdownParseTest {
 
     @Test
-    public void testGetLinksTestFile4() {
-        try {
-            
-            Path fileName = Path.of("test-file.md");
-            String content = Files.readString(fileName);
-            ArrayList<String> links = MarkdownParse.getLinks(content);
-            String[] expected = {"("};
-            assertArrayEquals(expected, links.toArray());
-        } catch (Exception e) {
-            System.out.println("File Not Found");
-        }
-    }
-
-    @Test
     public void addition() {
         assertEquals(2, 1 + 1);
         ;
